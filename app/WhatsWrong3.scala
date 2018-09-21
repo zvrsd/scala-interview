@@ -6,6 +6,12 @@ import scala.concurrent.Future
 import scala.util.{ Failure, Success }
 import scala.concurrent.ExecutionContext.Implicits.global
 
+/*
+Do you see anything that could lead to potential problems ?
+What would you do to fix it ?
+Do not mind about the not implemented code
+*/
+
 class WhatsWrong3 extends Actor {
 
   var internalState = "internal state"

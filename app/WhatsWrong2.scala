@@ -28,6 +28,7 @@ object EnterpriseDao {
 
 object WhatsWrong2 {
 
+  //Review this code. What could be done better ? How would you do it ?
   def getCEOAndEnterprise(ceo_id: Option[String]): Future[(Option[CEO], Option[Enterprise])] = {
     for {
       ceo <- CEODao.byId(ceo_id.get)
