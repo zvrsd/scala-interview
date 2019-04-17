@@ -1,13 +1,10 @@
-package whats_wrong
+package com.particeep.test.akka
 
-import akka.{ Done, NotUsed }
-import akka.actor.ActorSystem
-import akka.stream.ActorMaterializer
-import akka.stream.scaladsl._
-
-import scala.concurrent.Future
-
-//Complete the code (replace the ???)
+/**
+  * Question about Akka Stream framework https://doc.akka.io/docs/akka/current/stream/index.html
+  *
+  * Complete the code (replace the ???)
+  */
 object BasicStream {
 
   def main(args: Array[String]): Unit = {

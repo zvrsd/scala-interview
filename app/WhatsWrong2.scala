@@ -1,4 +1,4 @@
-package whats_wrong
+package com.particeep.test
 
 import scala.concurrent.Future
 
