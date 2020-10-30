@@ -1,12 +1,79 @@
-
+------------------------------------------------------------------------------------------------------------------------
 1) Explain REST and RESTful
+--
+A : Basically we use REST architecture to "hide" all the logic about how the server works and make the communication as
+    simple as possible, so almost anybody can use it.
 
+    We can have, let's say an Apache server working with 3 different databases, and clients written with
+    different languages, all of the clients using their own libraries, will only have to send/receive HTTP requests
+    to the server without having to know how the server works
+
+    RESTful is used to describe something that uses REST architecture, like a RESTful Web Service
+    All we need to care about when we use this kind of service is how to properly write/send the request,
+    and receive/read the data from the response.
+
+    A good API usually to contain its own documentation.
+
+
+------------------------------------------------------------------------------------------------------------------------
 2) Explain the architectural style for the creation of a web API (client server communication, formatting language, etc.)
+--
+A:  Client-Server communication is done using HTTP Protocol
+    Data are usually sent/received in JSON or XML format
+    but it could technically be any language as long as the server can handle it.
 
+
+------------------------------------------------------------------------------------------------------------------------
 3) Explain HTTP requests types when used with RESTful web (GET, PUT, POST, etc.)
+--
+A:  Each method has a specific meaning
 
+        CREATE  >  POST    -  Creates/Add a resource
+        READ    >  GET     -  Obtains one or more resources
+        UPDATE  >  PUT     -  Update/Modify a resource
+        DELETE  >  DELETE  -  Delete a resource
+
+    Maybe adding or deleting a photo in specific book could go in UPDATE
+
+    They are just Specifications, so the outcome will not change very much if you decide to juste use POST and GET for
+    any kind of operation but there are still some cases and reasons
+    why it is good to follow those Specifications.
+
+    However, even thought each method has a specific meaning we could just use POST
+
+
+------------------------------------------------------------------------------------------------------------------------
 4) Explain the difference between stateless and stateful protocol. Which type of protocol is HTTP ?
+--
+A:  When a stateless protocol is used, each transaction is independent from another, the server does not store infos
+    about the communication
 
+    For a stateful protocol, the server keep track of some information about the communication, so when you send a
+    request through a stateful protocol, the server knows that the request corresponds to this communication
+
+    HTTP is stateless, but by sending infos such as a session id for instance, we can somehow give the illusion its
+    stateful by telling the server that this request corresponds to a specific session
+
+
+------------------------------------------------------------------------------------------------------------------------
 5) Explain the difference between a GET and a POST (like how are sent the parameters)
+--
+A:  GET   >  parameters are sent in the URL ( https://www.myapi.com/?param=value&otherparam=othervalue[...] )
+    POST  >  parameters are sent in the body
 
-6) You can’t work out how to solve a coding problem. What do you do to find the answer?
+    You can send much more data via POST than GET, since the URL have a length limitation of about 2KB while the body
+    max length may hold few GB in some cases
+    Since GET params are in URL they are directly exposed to the user
+
+
+------------------------------------------------------------------------------------------------------------------------
+6) You can’t work out how to solve a coding problem. What do you do to find the answer ?
+--
+A:  That never happens to me anyway...
+    Ok more seriously, i try to isolate, locate and understand the problem as much as i possibly can
+    Once its done i lookup on the web to check if someone had the same problem, and how they solved it
+    If im still stuck / can't find out the answer, i start over from scratch, trying a different approach,
+    using all the useful infos i may have found out
+
+
+------------------------------------------------------------------------------------------------------------------------
